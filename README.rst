@@ -2,7 +2,6 @@ pyapksigner
 ============================================================
 | pyapksigner can sign the apk file.
 |
-
 .. code:: sh
 
   $ pip install pyapksigner
