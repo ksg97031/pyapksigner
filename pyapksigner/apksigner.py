@@ -43,7 +43,11 @@ def apksign(p_apk: PosixPath, key_path: str, key_alias: str, key_pass: str, ks_p
 
 def zipalign(p_apk: PosixPath) -> PosixPath:
     try:
-        zipaligned_apk_name = p_apk.name.replace("-unsigned.apk", "-zipaligned.apk")
+        zipaligned_apk_name = p_apk.name.replace("-unsigned.apk", "")
+        if zipaligned_apk_name.endswith(".apk"):
+            zipaligned_apk_name = zipaligned_apk_name[:-4]
+        
+        zipaligned_apk_name = zipaligned_apk_name + "-zipaligned.apk"
         p_zipaligned_apk = p_apk.parent.joinpath(zipaligned_apk_name)
         if p_zipaligned_apk.exists():
             p_zipaligned_apk.unlink()

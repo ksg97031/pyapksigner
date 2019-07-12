@@ -12,7 +12,7 @@ with open("README.rst", "r") as fh:
 setuptools.setup(
     name="pyapksigner",
     python_requires='>=3.8',
-    version="0.0.2",
+    version="0.0.3",
     author="ksg97031",
     author_email="ksg97031@gmail.com",
     description="Sign the apk file",
